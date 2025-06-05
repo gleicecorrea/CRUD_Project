@@ -4,18 +4,12 @@
 
 This project aims to build a complete product and sales management system using Python and MySQL, based on the CRUD methodology (Create, Read, Update, Delete). The system is operated through a command-line interface (CLI) and features a modular and extensible structure.
 
-## Technologies Used
-
-- **Programming Language:** Python 3.13
-- **Database:** MySQL
-- **External Libraries:** mysql-connector-python, sqlalchemy
-
 ## Object-Oriented Programming
 
 The project applies **OOP** principles to organize business logic around domain entities such as Product, Sale, and SaleDetail. Using classes, constructors, attributes, and specific methods, it ensures:
 
 - **Encapsulation:** each class has its own attributes and access methods.
-- **Code Reusability:** `set_` and `save` methods enable reusable manipulation and persistence of objects.
+- **Code Reusability:** set_ and save methods enable reusable manipulation and persistence of objects.
 - **Modular Organization:** each entity in the system represents a logical and cohesive component, facilitating maintenance and future development.
 
 OOP makes the code more readable, separates responsibilities, and makes the system extensible for future features like advanced reporting or user authentication.
@@ -86,55 +80,55 @@ Each submenu organizes the CRUD operations for products and sales:
 
 #### Create - A03_01.Create.py
 
-- The `create_produto()` function collects data and inserts it into the Product table.
+- The create_produto() function collects data and inserts it into the Product table.
 
 #### Read - A03_02.Read.py
 
-- `listar_produtos()` fetches all products from the database
+- listar_produtos() fetches all products from the database
 
 #### Update - A03_03.Update.py
 
-- `update_preco()` updates a product's price
-- `repor_produto()` increases a product's inventory
+- update_preco() updates a product's price
+- repor_produto() increases a product's inventory
 
 #### Delete - A03_04.Delete.py
 
-- `delete_produto()` removes a product from the database
+- delete_produto() removes a product from the database
 
 ### 4. Sale CRUD
 
 #### Create - A03_01.Create.py
 
-- `create_venda()` inserts the date/time into the Sale table
-- For each item sold, a record is created in `SaleDetail`
+- create_venda() inserts the date/time into the Sale table
+- For each item sold, a record is created in SaleDetail
 
 #### Read - A03_02.Read.py
 
-- `listar_vendas()` returns all sales
-- `vendas_por_dia`, `vendas_por_produto`, and `vendas_por_mes` implement filters
+- listar_vendas() returns all sales
+- vendas_por_dia, vendas_por_produto, and vendas_por_mes implement filters
 
 #### Delete - A03_04.Delete.py
 
-- `delete_venda()` removes a sale and its details
+- delete_venda() removes a sale and its details
 
 ### 5. Database Connection
 
-The `A01_Database.py` file contains the `get_db_connection()` function, responsible for establishing the connection with MySQL using `mysql.connector`.
+The A01_Database.py file contains the get_db_connection() function, responsible for establishing the connection with MySQL using mysql.connector.
 
 ### 6. Validation and Sanitization
 
-All user inputs pass through validation functions in the `A02_Utils.py` module, such as:
+All user inputs pass through validation functions in the A02_Utils.py module, such as:
 
-- `validate_int()`
-- `validate_float()`
-- `validate_date()`
-- `sanitize_input()`
+- validate_int()
+- validate_float()
+- validate_date()
+- sanitize_input()
 
 ### 7. OOP Classes
 
-- `A04_01.Produto.py`: Product class with attributes and setters
-- `A04_02.Venda.py`: Sale class with date/time
-- `A04_03.DetalheVenda.py`: saves each sale's items
+- A04_01.Produto.py: Product class with attributes and setters
+- A04_02.Venda.py: Sale class with date/time
+- A04_03.DetalheVenda.py: saves each sale's items
 
 These classes encapsulate data and facilitate manipulation and persistence.
 
